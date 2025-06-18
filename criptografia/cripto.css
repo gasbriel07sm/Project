@@ -1,422 +1,216 @@
-/* Importa as fontes e ícones (caso ainda não tenha feito no seu CSS principal) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*
+  ARQUIVO: cripto.css
+  Estilos com layout horizontal, mas com tamanho e espaçamento refinados.
+*/
 
-body {
-        background: #0c1224; /* azul escuro */
-}
-
-
-/* Estilo do container principal */
+/* Container que agrupa todos os cards de ferramentas */
 .main-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 5rem auto; /* <-- Ajuste feito aqui */
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Espaço vertical entre cada card horizontal */
 }
-/* Card de cada ferramenta */
+
+/* Estilo base para cada card de ferramenta */
 .tool-card {
-    background-color: #212529;
-    color: #f8f9fa; /* Cor de texto padrão para branco */
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    display: flex;
-    overflow: hidden;
-    /* Faz as colunas terem a mesma altura */
-    align-items: stretch; 
-     border: 1px solid #343a40; /* Borda sutil para definir o card */
-
+  background-color: var(--container-color);
+  color: var(--text-color);
+  border-radius: .75rem;
+  box-shadow: 0 8px 25px hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  flex-direction: row; /* Garante o layout horizontal */
+  overflow: hidden;
+  align-items: stretch;
+  border: 1px solid var(--primary-color-alt);
+  max-width: 900px; /* Largura máxima para os cards não ficarem gigantes em telas grandes */
+  margin-inline: auto; /* Centraliza os cards */
 }
-/* Inverte a ordem da imagem para variar o layout */
+
+/* Variação de layout, invertendo a ordem da imagem */
 .tool-card.reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse; /* Mantém a inversão horizontal */
 }
 
-/* Div da imagem lateral */
+/* Coluna da imagem (mais estreita) */
 .tool-image {
-    /* Define uma largura fixa de 30% e impede que encolha ou estique */
-    flex: 0 0 30%; 
+  flex: 0 0 35%; /* A imagem ocupa 35% da largura do card */
+  min-width: 280px; /* Largura mínima para a imagem não sumir */
 }
 
 .tool-image img {
-    width: 100%;
-    height: 100%;
-    /* Garante que a imagem cubra todo o espaço sem distorcer */
-    object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Div do conteúdo da ferramenta */
+/* Coluna do conteúdo interativo */
 .tool-content {
-    flex: 1; /* Ocupa o restante do espaço */
-    padding: 2.5rem; /* Aumenta o espaçamento interno */
+  flex: 1;
+  padding: 2rem; /* Preenchimento interno um pouco menor */
+  display: flex;
+  flex-direction: column;
 }
-
 
 .tool-content h2 {
-    color: #ffffff; /* Título principal em branco puro */
-    margin-bottom: 1rem;
+  color: var(--title-color);
+  margin-bottom: 0.75rem;
+  font-size: var(--h3-font-size);
 }
 
-.tool-content p {
-    color: #ced4da;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+.tool-content .description {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--primary-color);
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  line-height: 1.5; /* Melhorando espaçamento entre linhas */
 }
 
-/* Elementos de formulário */
-.form-group, .password-container {
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-/* --- Inputs e Formulários com Tema Escuro --- */
-.form-group label {
-    color: #ced4da; /* Cinza claro para os labels */
-    font-weight: bold;
-    font-size: 0.9rem;
+/* --- Estilos de Formulários e Inputs com mais espaçamento --- */
+.form-group, .password-container, .generated-password-container {
+  margin-bottom: 1rem;
+  position: relative;
 }
 
 .tool-content label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  display: block;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.5rem;
+  color: var(--title-color);
 }
 
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    background-color: #222; /* Fundo cinza-escuro para inputs */
-    border: 1px solid #444; /* Borda um pouco mais clara */
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #fff; /* Texto do input em branco */
-}
-
-/* Remove a seta padrão feia do select no dark mode (melhora visual) */
-select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ced4da' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right .75rem center;
-    background-size: 16px 12px;
-}
-
-/* Placeholder também branco */
-input::placeholder,
-textarea::placeholder {
-    color: #ccc;
-    opacity: 1;
-}
-
-/* Desabilitados (opcional) */
-input:disabled,
-textarea:disabled,
-select:disabled {
-    background-color: #333;
-    color: #888;
-}
-
-/* Todos os campos de senha e campos de texto */
-input[type="password"],
-input[type="text"] {
-    background-color: #222 !important; /* fundo escuro */
-    color: #fff !important;            /* texto branco */
-    border: 1px solid #444 !important;
-}
-
-/* Placeholder branco */
-input[type="password"]::placeholder,
-input[type="text"]::placeholder {
-    color: #ccc !important;
-    opacity: 1;
-}
-
-
-
-
-.checkbox-group label {
-    color: #ced4da;
-}
-
-.tool-content input, .tool-content select, .tool-content textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
+.tool-content input[type="text"],
+.tool-content input[type="password"],
+.tool-content select,
 .tool-content textarea {
-    resize: vertical;
+  width: 100%;
+  padding: .75rem 1rem;
+  background-color: var(--body-color);
+  border: 1px solid var(--primary-color-alt);
+  border-radius: .5rem;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  transition: border-color .3s, box-shadow .3s;
 }
 
-/* Ícone de olho para ver/ocultar senha */
+.tool-content input::placeholder,
+.tool-content textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.tool-content input:focus,
+.tool-content select:focus,
+.tool-content textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px hsla(188, 100%, 46%, 0.2);
+}
+
 .password-container i {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #888;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-color);
 }
 
-/* Medidor de força */
+/* --- Medidor de Força de Senha --- */
 .strength-meter {
-    height: 10px;
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 0.5rem;
+  height: 8px;
+  background-color: hsla(218, 65%, 19%, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 0.5rem;
 }
 
 .strength-bar {
-    height: 100%;
-    width: 0;
-    transition: width 0.3s, background-color 0.3s;
+  height: 100%;
+  width: 0;
+  border-radius: 8px;
+  transition: width 0.3s, background-color 0.3s;
 }
-.strength-bar.weak { background-color: #e74c3c; } /* Vermelho */
-.strength-bar.medium { background-color: #f39c12; } /* Laranja */
-.strength-bar.strong { background-color: #2ecc71; } /* Verde */
+.strength-bar.weak { background-color: hsl(0, 79%, 63%); }
+.strength-bar.medium { background-color: hsl(35, 91%, 65%); }
+.strength-bar.strong { background-color: var(--primary-color); }
 
 .strength-text {
-    font-weight: bold;
-    margin-top: 0.5rem;
-    height: 20px; /* Altura fixa para não "pular" */
+  font-weight: var(--font-semi-bold);
+  margin-top: 0.75rem;
+  height: 20px;
 }
 
-/* Sugestões */
-.suggestions ul {
-    list-style-type: '✓  ';
-    padding-left: 20px;
-    color: #555;
-}
-
-/* Botões */
-.button-group {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.tool-content button {
-    flex: 1;
-    padding: 12px;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.tool-content button:hover {
-    background-color: #34495e;
-}
-
-/* Saída do Hash */
-.hash-output-box {
-    background-color: #f5f5f5;
-    padding: 12px;
-    border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
-    word-break: break-all;
-    min-height: 48px;
-    border: 1px solid #ddd;
-}
-
-
-
-/* 3. AJUSTE PARA TELAS MENORES (RESPONSIVIDADE) */
-@media (max-width: 960px) {
- .tool-card,
-    .tool-card.reverse {
-        flex-direction: column;
-    }
-
-    .tool-image {
-        /* ALTURA FORÇADA PARA CELULAR */
-        height: 180px !important;
-        min-height: 180px !important;
-         background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius: 12px 12px 0 0;
-    }
-
-    .tool-content {
-        padding: 1.5rem;
-    }
-
-    .tool-image img{
-        height: 180px;
-    }
-}
-
-/* Descrição para leigos */
-.description {
-    font-size: 1rem;
-    color: #adb5bd; /* Cinza claro para descrição, menos forte que branco */
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    border-left: 3px solid #0d6efd; /* DETALHE AZUL MANTIDO */
-}
-
-/* Barra do Medidor de Senha */
-.strength-meter {
-    background-color: #495057; /* Fundo da barra mais escuro */
-}
-
-.strength-text {
-    color: #adb5bd; /* Texto "Senha Fraca/Média/Forte" */
-    font-weight: bold;
-}
-
-
-/* --- Estilos para Medidor de Senha Melhorado --- */
+/* --- Critérios de Validação --- */
 .strength-criteria {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem; /* Espaço entre os itens */
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .criteria-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding-bottom: 0.5rem;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-    border-bottom: 1px solid #343a40; /* Separador mais escuro */
-    color: #adb5bd; /* Cor padrão do texto do critério */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--small-font-size);
 }
+.criteria-item i { font-size: 1.1rem; }
+.criteria-item.invalid { color: hsl(0, 79%, 63%); }
+.criteria-item.valid { color: var(--primary-color); text-decoration: line-through; opacity: 0.8; }
 
-.criteria-item:last-child {
-    border-bottom: none; /* Remove a linha do último item */
-}
+/* --- Gerador de Senhas --- */
+.checkbox-group { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;}
+.checkbox-group label { font-weight: normal; display: flex; align-items: center; gap: .5rem; margin-bottom: 0; cursor: pointer;}
 
-.criteria-item i {
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
+.generated-password-container { display: flex; gap: .5rem; }
 
-/* Estilo para quando o critério NÃO é atendido */
-.criteria-item.invalid {
-    color: #ff8a80; /* Vermelho mais claro para boa visibilidade */
-}
-.criteria-item.invalid i {
-    color: #ff8a80;
-}
-
-/* Estilo para quando o critério É atendido */
-.criteria-item.valid {
-    color: #b9f6ca; /* Verde mais claro */
-    text-decoration: line-through;
-    text-decoration-color: #69f0ae;
-}
-.criteria-item.valid i {
-    color: #b9f6ca;
-}
-
-/* Caixas de resultado (Hash e URL) */
-.hash-output-box,
-.results-box {
-    background-color: #2c343a;
-    border: 1px solid #495057;
-    color: #ced4da;
-}
-
-
-/* --- Estilos para o Gerador de Senhas --- */
-.checkbox-group {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-}
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: normal;
-}
-input[type="range"] {
-    cursor: pointer;
-}
-.generated-password-container {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-.generated-password-container input {
-    background-color: #f5f5f5;
-    font-weight: bold;
-}
 .generated-password-container button {
-    padding: 0 1rem;
-    background-color: #6c757d;
+  flex-shrink: 0;
+  padding: 0 1rem;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  border-radius: .5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  transition: background-color .3s, color .3s, border-color .3s;
 }
 .generated-password-container button:hover {
-    background-color: #5a6268;
+    background-color: var(--text-color);
+    color: var(--body-color);
+    border-color: var(--text-color);
 }
 
-/* Botão de ação principal */
-.main-action-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #0d6efd;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-.main-action-btn:hover {
-    background-color: #0b5ed7;
-}
+/* --- Botões e Saídas --- */
+.button-group { display: flex; gap: 1rem; }
+.button-group .button { flex: 1; justify-content: center; }
 
-/* --- Estilos para o Analisador de URL --- */
-.results-box {
-    margin-top: 1.5rem;
-    background-color: #2c343a;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
+.hash-output-box, .results-box {
+    background-color: var(--body-color);
+    border: 1px solid var(--primary-color-alt);
+    border-radius: .5rem;
     padding: 1rem;
     min-height: 50px;
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
 }
-.results-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-.results-box li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    border-bottom: 1px solid #343a40;
+#hash-output { min-height: 90px; }
+.results-box { margin-top: 1.5rem; }
 
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .tool-card,
+  .tool-card.reverse {
+    flex-direction: column; /* Em telas menores, volta para o layout vertical */
+  }
+  .tool-image {
+    min-width: 100%;
+    height: 180px;
+  }
+  .tool-content { padding: 1.5rem; }
 }
-.results-box .valid {
-    color: #b9f6ca;
-}
-.results-box .invalid {
-    color: #ff8a80;
-}
+

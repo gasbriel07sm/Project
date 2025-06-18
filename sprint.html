@@ -1,59 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OnionShield - Acesso</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="/sprint.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnionShield</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sprint.css"">
 </head>
 <body>
+    <!--============== HEADER ==============-->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="#" class="nav__logo">
+                    <img src="./logo branca.png" alt=""> OnionShield
+                </a>
 
-  <header class="header">
-    <nav class="nav">
-      <div class="nav__container">
-        <a href="./index.html" class="nav__logo">
-            <img src="logo branca.png" alt="Logo OnionShield"> OnionShield
-        </a>
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-                <li><a href="./index.html" class="nav__link">Home</a></li>
-                <li class="dropdown__item">
-                    <div class="nav__link">Informações<i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
-                    <ul class="dropdown__menu">
-                        <li><a href="#" class="dropdown__link"><i class="ri-bookmark-line"></i> Conteúdo</a></li>
-                        <li class="dropdown__subitem">
-                            <div class="dropdown__link"><i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i></div>
-                            <ul class="dropdown__submenu">
-                                <li><a href="#" class="dropdown__sublink"><i class="ri-file-list-line"></i> Questionário 1</a></li>
-                                <li><a href="#" class="dropdown__sublink"><i class="ri-file-list-line"></i> Questionário 2</a></li>
-                                <li><a href="#" class="dropdown__sublink"><i class="ri-file-list-line"></i> Questionário 3</a></li>
-                                <li><a href="#" class="dropdown__sublink"><i class="ri-file-list-line"></i> Questionário 4</a></li>
-                                <li><a href="#" class="dropdown__sublink"><i class="ri-file-list-line"></i> Questionário 5</a></li>
-                            </ul>
-                        </li>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="./index.html" class="nav__link">Home</a></li>
+
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Informações<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                             <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Questionário 1
+                                            </a>
+                                        </li>
+                
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Questionário 2
+                                            </a>
+                                        </li>
+                
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Questionário 3
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Questionário 4
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i>Questionário 5
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    </li>
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
                     </ul>
-                </li>
-                <li><a href="#" class="nav__link">Sobre</a></li>
-                <li><a href="#" class="nav__link">Contato</a></li>
-                <li><a href="./login.html" class="nav__link">Login</a></li>
-            </ul>
-        </div>
-        <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line nav__burger"></i>
-            <i class="ri-close-line nav__close"></i>
-        </div>
-      </div>
-    </nav>
-  </header>
+                    <li><a href="./criptografia/criptografia.html" class="nav__link">Criptografia</a></li>
+
+
+                    <li><a href="" class="nav__link">Sobre</a></li>
+
+                    <li><a href="/contato/contato.html" class="nav__link">Contato</a></li>
+
+                    <li><a href="sprint.html" class="nav__link">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+     <!--============== FIM HEADER ==============-->
 
   <main class="main">
     <section class="login-section section">
       <div class="login-page__wrapper">
 
         <div class="login-image__wrapper">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop" alt="Imagem de Cibersegurança">
+          <img src="./criptografia/assets/imagem1.jpg" alt="Imagem de Cibersegurança">
         </div>
 
         <div class="login-container">
@@ -61,8 +111,10 @@
           <p class="sub">Entre na sua conta ou crie uma nova para acessar o mural</p>
 
           <div class="tabs">
-            <button id="btnLogin" class="active" onclick="toggleForm('login')">🔐 Entrar</button>
-            <button id="btnRegister" onclick="toggleForm('register')">👤 Cadastrar</button>
+            <button id="btnLogin" class="active" onclick="toggleForm('login')">
+              <i class="ri-lock-line"></i> Entrar</button>
+            <button id="btnRegister" onclick="toggleForm('register')">
+              <i class="ri-user-fill"></i> Cadastrar</button>
           </div>
 
           <form id="loginForm">
@@ -74,9 +126,9 @@
               <label>Senha</label>
               <input type="password" placeholder="••••••" />
             </div>
-            <button type="submit" class="button button--solid">Entrar</button>
+            <button type="submit" class="button button--solid button-submit">Entrar</button>
           </form>
-
+<!--CADASTRO-->
           <form id="registerForm" class="hidden" onsubmit="event.preventDefault(); BuscarAPI();">
             <div class="form-group">
               <label>Nome completo</label>
@@ -98,7 +150,9 @@
               <label>Senha</label>
               <input type="password" id="caixa-texto-senha" placeholder="••••••" />
             </div>
-            <button type="submit" class="button button--solid">Criar conta</button>
+            <button type="submit" class="button button--solid button-submit">Criar conta</button>
+            <div id="resultado"></div>
+            <div id="dados-pessoa"></div>
           </form>
         </div>
       </div>
@@ -113,36 +167,51 @@
     </div>
   </div>
 
-  <footer class="footer">
-      <div class="footer__container container grid">
-        <div class="footer__content">
-            <a href="#" class="footer__logo">OnionShield</a>
-            <p class="footer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus.</p>
+      <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">OnionShield</a>
+                <p class="footer__description" style="margin-top: 0.5rem;">Uma empresa acolhedora, com suporte e ênfase na segurança e bem-estar dos clientes.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-linkedin-box-line"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Links Rápidos</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Sobre</a></li>
+                    <li><a href="#" class="footer__link">Nossos Serviços</a></li>
+                    <li><a href="#" class="footer__link">Carreira</a></li>
+                    <li><a href="#" class="footer__link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Nosso Escritório</h3>
+                <ul class="footer__links">
+                    <li>Sistemas da Informação Laboratório</li>
+                    <li>Uniaraxá, Sala 3C01</li>
+                    <br>
+                    <li>Contato 1: (XX) XXXXX-XXXX</li>
+                    <li>Contato 2: (XX) XXXXX-XXXX</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Inscreva-se</h3>
+                <p class="footer__description">Receba notícias e atualizações constantes de nossos serviços.</p>
+                <form action="" class="footer__form" >
+                    <input type="email" placeholder="Seu email" class="footer__input">
+                    <button class="button">Inscrever</button>
+                </form>
+            </div>
         </div>
-        <div class="footer__content">
-            <h3 class="footer__title">Links Rápidos</h3>
-            <ul class="footer__links">
-                <li><a href="#" class="footer__link">Sobre</a></li>
-                <li><a href="#" class="footer__link">Contato</a></li>
-            </ul>
-        </div>
-        <div class="footer__content">
-            <h3 class="footer__title">Nosso Escritório</h3>
-            <ul class="footer__links">
-                <li>3517 W. Gray St. Utica,</li>
-                <li>Pennsylvania 57867</li>
-            </ul>
-        </div>
-        <div class="footer__content">
-            <h3 class="footer__title">Inscreva-se</h3>
-            <form action="#" class="footer__form">
-                <input type="email" placeholder="Seu email" class="footer__input">
-                <button type="submit" class="button button--solid">Inscrever</button>
-            </form>
-        </div>
-    </div>
-    <p class="footer__copy">&#169; OnionShield. Todos os direitos reservados.</p>
-  </footer>
+        <p class="footer__copy">&#169; OnionShield. Todos os direitos reservados.</p>
+    </footer>
 
   <script src="main.js"></script>
   <script src="sprint.js"></script>
