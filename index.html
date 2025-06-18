@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnionShield</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--============== HEADER ==============-->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="#" class="nav__logo">
+                    <img src="logo branca.png" alt=""> OnionShield
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="" class="nav__link">Home</a></li>
+
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Informações<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                             <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Questionário 1
+                                            </a>
+                                        </li>
+                
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Questionário 2
+                                            </a>
+                                        </li>
+                
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Questionário 3
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Questionário 4
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i>Questionário 5
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    </li>
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
+                    </ul>
+                    <li><a href="./criptografia/criptografia.html" class="nav__link">Criptografia</a></li>
+
+
+                    <li><a href="" class="nav__link">Sobre</a></li>
+
+                    <li><a href="/contato/contato.html" class="nav__link">Contato</a></li>
+
+                    <li><a href="./sprint.html" class="nav__link">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+     <!--============== FIM HEADER ==============-->
+    <main class="main">
+        <section class="hero section">
+            <div class="hero__container container grid">
+                <div class="hero__data">
+                    <h1 class="hero__title">Proteja Seu Negócio Com Nossa Segurança</h1>
+                    <p class="hero__description">
+                        Somos especialistas em segurança da informação, oferecendo soluções robustas para proteger seus dados e sua infraestrutura contra as ameaças mais avançadas.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#" class="button">Começar Agora</a>
+                        <a href="#" class="button button--ghost">Saber Mais</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="https://i.imgur.com/8Y0h3mC.png" alt="Ilustração de cibersegurança">
+                </div>
+            </div>
+        </section>
+
+        <section class="solutions section">
+            <h2 class="section__title">Soluções de Cibersegurança</h2>
+            <p class="section__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+            <div class="solutions__container container grid">
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-cloud-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança em Nuvem</h3>
+                        <p class="solutions__description-card">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+                        <a href="#" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-key-2-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança de Senhas</h3>
+                        <p class="solutions__description-card">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+                        <a href="#" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                     <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-shield-user-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Dados Pessoais</h3>
+                        <p class="solutions__description-card">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+                        <a href="#" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-database-2-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança de Servidores</h3>
+                        <p class="solutions__description-card">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+                        <a href="#" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-file-shield-2-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança de Arquivos</h3>
+                        <p class="solutions__description-card">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+                        <a href="#" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-global-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança de Websites</h3>
+                        <p class="solutions__description-card">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+                        <a href="#" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+            </div>
+            <div class="solutions__cta container">
+                <h3>Obtenha 7 dias de teste grátis</h3>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                <a href="#" class="button">Obter Teste Grátis</a>
+            </div>
+        </section>
+
+        <section class="testimonials section">
+            <h2 class="section__title">Depoimentos de Clientes</h2>
+            <div class="testimonials__container container grid">
+                <div class="testimonials__card">
+                    <i class="ri-double-quotes-l testimonials__quote"></i>
+                    <div class="testimonials__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <h3 class="testimonials__title">Ótimo trabalho para resolver problemas de cibersegurança</h3>
+                    <p class="testimonials__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                    <div class="testimonials__author">
+                        <img src="https://i.imgur.com/I6lhtj4.png" alt="Avatar Hanna Sajira">
+                        <div class="testimonials__author-info">
+                            <h4>Hanna Sajira</h4>
+                            <span>CEO KeepFund.it</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials__card">
+                    <i class="ri-double-quotes-l testimonials__quote"></i>
+                    <div class="testimonials__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <h3 class="testimonials__title">Excelente performance e suporte da equipe</h3>
+                    <p class="testimonials__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                    <div class="testimonials__author">
+                        <img src="https://i.imgur.com/pZ2vVlX.png" alt="Avatar Albert Carls">
+                        <div class="testimonials__author-info">
+                            <h4>Albert Carls</h4>
+                            <span>CEO HappyPlay.co</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta section">
+        <div class="cta__container container">
+            <div class="cta__left">
+                <h2 class="section__title">Nós Ajudamos Você a Ter Uma Cibersegurança Forte</h2>
+                <p class="cta__description">Lorem ipsum dolor sit amet, consetetur adipiscing elit. Aliquam hendrerit aliquet fermentum.</p>
+                <a href="#" class="button">Contate-nos</a>
+            </div>
+            <div class="cta__right">
+                <div class="cta__item">
+                    <h4>Ajudar Empresas a Evitar Ameaças</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus mattis uma nec convallis.</p>
+                </div>
+                <div class="cta__item">
+                    <h4>Proteger Qualquer Site de Hackers</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus mattis uma nec convallis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">OnionShield</a>
+                <p class="footer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-linkedin-box-line"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Links Rápidos</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Sobre</a></li>
+                    <li><a href="#" class="footer__link">Nossos Serviços</a></li>
+                    <li><a href="#" class="footer__link">Carreira</a></li>
+                    <li><a href="#" class="footer__link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Nosso Escritório</h3>
+                <ul class="footer__links">
+                    <li>3517 W. Gray St. Utica,</li>
+                    <li>Pennsylvania 57867</li>
+                    <br>
+                    <li>Contato 1: (225) 555-0118</li>
+                    <li>Contato 2: (239) 555-0108</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Inscreva-se</h3>
+                <p class="footer__description">Lorem ipsum dolor sit amet, consetetur sadipscing</p>
+                <form action="" class="footer__form">
+                    <input type="email" placeholder="Seu email" class="footer__input">
+                    <button class="button">Inscrever</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer__copy">&#169; OnionShield. Todos os direitos reservados.</p>
+    </footer>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>
